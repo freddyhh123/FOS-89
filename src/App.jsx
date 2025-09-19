@@ -234,7 +234,7 @@ function CRTText({ lines, speed = 10, onComplete, pageType }) {
             </div>
           );
         }
-        
+
         if (line.startsWith('Email: ')) {
           const addr = 'fredhorvathoward@gmail.com';
           return (
@@ -254,7 +254,7 @@ function CRTText({ lines, speed = 10, onComplete, pageType }) {
           return (
             <div key={idx}>
               <a
-                href="/Frederick%20Horvath-Howard%20CV%2010_6_25.pdf"
+                href="/FHH_CV.pdf"
                 download="Frederick Horvath-Howard CV.pdf"
                 style={CRT_LINK_STYLE}
               >
