@@ -253,11 +253,11 @@ function CRTText({ lines, speed = 10, onComplete, pageType }) {
         if (idx === 0 && line.includes('[Download PDF')) {
           return (
             <div key={idx}>
-              <a
-                href="/FHH_CV.pdf"
-                download="Frederick Horvath-Howard CV.pdf"
-                style={CRT_LINK_STYLE}
-              >
+                <a
+                  href={`${import.meta.env.BASE_URL}FHH_CV.pdf`}
+                  download="Frederick Horvath-Howard CV.pdf"
+                  style={CRT_LINK_STYLE}
+                >
                 Download PDF: Frederick Horvath-Howard CV
               </a>
             </div>
