@@ -1,0 +1,208 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background: #0b0b0b;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.crt-content {
+  border: none;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* CRT Monitor Styles */
+body {
+  background: #111;
+  color: #00ff41;
+  font-family: 'Share Tech Mono', 'Courier New', Courier, monospace;
+  text-shadow: 0 0 1px #00ff41, 0 0 6px #00ff41;
+}
+
+.crt-frame {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 999;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crt-frame-inner {
+  border: 32px solid #222;
+  border-radius: 32px;
+  box-shadow: 0 0 80px #222, 0 0 0 12px #222 inset;
+  background: #181818;
+  width: 98vw;
+  height: 94vh;
+  max-width: 900px;
+  max-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+}
+
+@media (max-width: 700px) {
+  .crt-frame {
+    display: none;
+  }
+}
+
+.crt {
+  position: relative;
+  background: #111;
+  color: #00ff41;
+  border: none;
+  box-shadow: 0 0 8px #00ff4122;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 900px;
+  max-height: 700px;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.crt-content {
+  width: 100%;
+  max-width: 95%;
+  flex: 1 1 auto;
+  min-height: 0;
+  display: block;
+  text-align: left;
+  padding: 2rem;
+}
+
+.crt-scanlines {
+  pointer-events: none;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%; height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0,0,0,0) 0px,
+    rgba(0,0,0,0) 1px,
+    rgba(0,255,65,0.07) 2px,
+    rgba(0,0,0,0) 3px
+  );
+  z-index: 2;
+}
+
+.crt-flicker {
+  animation: crt-flicker 0.15s infinite;
+}
+
+@keyframes crt-flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.97; }
+  100% { opacity: 1; }
+}
+
+.legend {
+  padding-left: 2rem;
+  margin-top: 0.5rem;
+  border-bottom: #00ff41;
+  border-radius: 0.25rem;
+}
+
+.toggle-btn {
+  background: #222;
+  color: #00ff41;
+  border: 1px solid #00ff41;
+  padding: 0.5em 1em;
+  margin-bottom: 1em;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1em;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.toggle-btn:hover {
+  background: #00ff4122;
+}
+
+/* Remove CRT bend effect for now */
+.crt-bend, .crt-bend-inner {
+  transform: none !important;
+  perspective: none !important;
+  box-shadow: none !important;
+}
+
+/* Command line styles */
+.terminal {
+  background: #181818;
+  color: #00ff41;
+  font-family: inherit;
+  padding: 1em 2em;
+  border-radius: 0 0 16px 16px;
+  margin: 0;
+  width: 100%;
+  max-width: none;
+  box-shadow: none;
+  border-top: 1px solid #222;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+.terminal-input {
+  background: transparent;
+  border: none;
+  color: #00ff41;
+  font-family: inherit;
+  font-size: 1.1em;
+  outline: none;
+  width: 80%;
+}
+.terminal-label {
+  color: #00ff41;
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+
+.projects-header {
+  padding: 2rem;
+  padding-bottom: 0.5rem;
+}
